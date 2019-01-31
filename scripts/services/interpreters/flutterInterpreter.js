@@ -17,18 +17,18 @@ mcgApp.service('FlutterInterpreter', function () {
         var themeCodeString = '/* For use in material-ui/src/styles/colors.js */\n';
         if (this.single === true) {
             // Generate palette's code
-            themeCodeString = this.createMTwoPaletteCode(this.exportObj);
+            themeCodeString = this.createFlutterPaletteCode(this.exportObj);
         } else {
             // For each palette, add it's declaration
             for (var i = 0; i < this.exportObj.length; i++) {
-                themeCodeString = themeCodeString + this.createMTwoPaletteCode(this.exportObj[i]);
+                themeCodeString = themeCodeString + this.createFlutterPaletteCode(this.exportObj[i]);
             }
         }
 
         this.code = themeCodeString;
     };
 
-    this.createMTwoPaletteCode = function (palette) {
+    this.createFlutterPaletteCode = function (palette) {
         var code = '';
 
         // Generate base colors
