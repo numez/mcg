@@ -11,7 +11,8 @@ function DialogExportCtrl($scope, $mdDialog, $timeout, exportObj, single, theme,
 		{ name: "Material UI (React)", key: 'materialui'},
 		{ name: "Material UI Next (React)", key: 'materialuinext'},
 		{ name: "MCG Reimport", key: 'mcg'},
-		{ name: "Vue.js Material Design", key: 'vue'}
+		{ name: "Vue.js Material Design", key: 'vue'},
+		{ name: "Flutter (Dart)", key: 'flutter'},
 	];
 
 	// Set defaults and injected arguements
