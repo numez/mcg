@@ -9,6 +9,7 @@ mcgApp.service('TopInterpreter',
         'EmberInterpreter',
         'McgInterpreter',
         'VueInterpreter',
+        'FlutterInterpreter',
         function(
             AngularJsInterpreter,
             AngularJs2Interpreter,
@@ -18,7 +19,8 @@ mcgApp.service('TopInterpreter',
             MdLiteInterpreter,
             EmberInterpreter,
             McgInterpreter,
-            VueInterpreter
+            VueInterpreter,
+            FlutterInterpreter
         ){
             this.getInterpreter = function (name)
             {
@@ -42,6 +44,8 @@ mcgApp.service('TopInterpreter',
                         return McgInterpreter;
                     case "vue":
                         return VueInterpreter;
+                    case "flutter":
+                        return FlutterInterpreter;
                     default:
                         return false;
                 }
